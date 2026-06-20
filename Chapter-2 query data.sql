@@ -8,3 +8,5 @@ SELECT first_name,country,score
 FROM customers;
 --TASK 2 - RETRIEVE CUTSOMERS WITH A SCORE !=0
 SELECT * FROM customers WHERE score!=0;
+--Task 3 - retrieve customers from Germany
+SELECT  * FROM customers WHERE  country='Germany';
