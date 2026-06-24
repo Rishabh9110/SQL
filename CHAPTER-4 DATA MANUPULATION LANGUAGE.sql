@@ -13,6 +13,8 @@ SELECT id,first_name,null,'unknown' from customers
 
 --TASK 1-CHANGE THE SCORE OF CUSTOMER 6 TO 0
 UPDATE customers SET score=0 WHERE ID =6;
+--TASK 2- CHANGE THE SCORE OF CUSTOMER WITH ID 10 TO 0 AND UPDATE THE COUNTRY TO UK
+UPDATE customers SET score=0,country='UK' WHERE id=10
 
 
 
