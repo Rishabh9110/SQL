@@ -24,3 +24,5 @@ SELECT count(id) AS Total_Customers, country,SUM(score) AS Total_Score FROM cust
 SELECT country,AVG(score) AS average_score FROM customers WHERE  score!=0 GROUP BY country HAVING AVG(score)>430;
 --Task 10- return unique list of all the country
 SELECT DISTINCT country FROM customers;
+--TASK 11- RETRIEVE ONLY THREE CUSTOMERS
+SELECT TOP 3 * FROM customers;
