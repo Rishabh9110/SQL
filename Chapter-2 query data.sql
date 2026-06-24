@@ -22,3 +22,5 @@ SELECT country,SUM(score) AS SCORE_SUM FROM customers GROUP BY country;
 SELECT count(id) AS Total_Customers, country,SUM(score) AS Total_Score FROM customers GROUP BY country;
 --Task 9 - find the average score of each country considering customers only with a score !=0 and return country with average score >430
 SELECT country,AVG(score) AS average_score FROM customers WHERE  score!=0 GROUP BY country HAVING AVG(score)>430;
+--Task 10- return unique list of all the country
+SELECT DISTINCT country FROM customers;
