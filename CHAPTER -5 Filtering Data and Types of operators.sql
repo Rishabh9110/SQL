@@ -39,5 +39,11 @@ SELECT * FROM customers WHERE country IN ('USA','GERMANY');
 --SEARCH OPERATOR LIKE
 --Task 1- find all customers whose first name starts with capital M
 SELECT * FROM customers WHERE first_name LIKE 'M%';
+--task 2-find all customers whose first name ends with n
+SELECT * FROM customers where first_name LIKE '%n';
+--task 3 - find all customers whose first name contains an r
+SELECT * FROM customers WHERE first_name LIKE '%R%'
+--TASK 4- find all customers who first_name has r in third position
+SELECT * FROM customers WHERE first_name LIKE '__r%'
 
 
