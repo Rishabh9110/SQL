@@ -24,3 +24,20 @@ SELECT * FROM customers WHERE country='usa' AND score>500;
 SELECT * FROM customers WHERE score >500 OR country='usa';
 --Task 3- retrieve all customers with a score not less than 500
 SELECT * FROM customers WHERE NOT score < 500
+
+--RANGE OPERATOR BETWEEN
+
+--TASK 1- retrieve all customers who score falls between range 100 and 500
+SELECT * FROM customers WHERE score BETWEEN 100 AND 500;
+   
+--MEMBERSHIP OPERATOR IN AND NOT IN
+
+--Task 1-retrieve all customers from either germany or usa
+SELECT * FROM customers WHERE country IN ('USA','GERMANY');
+ 
+
+--SEARCH OPERATOR LIKE
+--Task 1- find all customers whose first name starts with capital M
+SELECT * FROM customers WHERE first_name LIKE 'M%';
+
+
