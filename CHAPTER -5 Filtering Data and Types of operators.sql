@@ -22,4 +22,5 @@ SELECT * FROM customers WHERE SCORE <=500;
 SELECT * FROM customers WHERE country='usa' AND score>500;
 --Task 2-retrieve all customers who are either from usa or have a score greater than 500;
 SELECT * FROM customers WHERE score >500 OR country='usa';
-
+--Task 3- retrieve all customers with a score not less than 500
+SELECT * FROM customers WHERE NOT score < 500
