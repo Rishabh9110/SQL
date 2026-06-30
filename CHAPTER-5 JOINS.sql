@@ -21,7 +21,24 @@ SELECT * FROM customers LEFT JOIN orders ON id=customer_id WHERE customer_id is 
 --Task6--get all orders without matching customers
 SELECT * FROM CUSTOMERS RIGHT JOIN ORDERS ON id=customer_id WHERE id is null;
 --task-6-find customers without order and orders without customer
-SELECT * FROM customers join orders on id=customer_id WHERE id is null and customer_id is null;
-
+SELECT * FROM customers full join orders on id=customer_id WHERE id is null OR customer_id is null;
+--CHALLENGE-get all customers along with their orders but only for customer who have placed an order 
+SELECT c.id,c.first_name,o.order_id,o.order_date,o.sales,O.customer_id
+FROM Customers AS C LEFT JOIN orders AS O ON c.id=o.customer_id WHERE  customer_id is not null 
+--task-7-generate all possible combination of customers and orders
+SELECT * FROM customers CROSS JOIN orders
+/*task-8-using sales db retrieve a list of all orders,along with the related customer,product and employee details
+for each order display:
+order_id
+customer name
+product name 
+sales
+ price
+sales person name*/
+select o.orderid,o.sales,c.firstname from sales.orders AS O left join sales.customers AS C ON O.CUSTOMERID=C.CUSTOMERID 
+SELECT * FROM sales.employees
+SELECT * FROM sales.orders
+SELECT * FROM sales.ordersarchive
+SELECT * FROM sales.products
 
 
