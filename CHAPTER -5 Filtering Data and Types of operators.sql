@@ -1,5 +1,6 @@
 --CHAPTER-5 DATA FILTERING AND TYPES OF OPERATORS
 
+--comparison operators
 --Task 1- retrieve all customers from germany
 SELECT * FROM customers WHERE country='GERMANY';
 -- TASK 2-retrieve two customers who are not from germany
@@ -12,5 +13,12 @@ SELECT * FROM customers WHERE SCORE >500;
 SELECT * FROM customers WHERE score >=500;
 --Task 5- retrieve all customers with a score less than 500
 SELECT * FROM customers WHERE SCORE <500;
---Task 6- retrieve all customers with a score than or equal to 500
+--Task 6- retrieve all customers with a score less than or equal to 500
+SELECT * FROM customers WHERE SCORE <=500;
+
+--LOGICAL OPERATORS
+
+--TASK 1 -retrieve all customers who are from usa and have a score > 500
+SELECT * FROM customers WHERE country='usa' AND score>500;
+
 
