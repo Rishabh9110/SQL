@@ -35,10 +35,10 @@ product name
 sales
  price
 sales person name*/
-select o.orderid,o.sales,c.firstname from sales.orders AS O left join sales.customers AS C ON O.CUSTOMERID=C.CUSTOMERID 
-SELECT * FROM sales.employees
-SELECT * FROM sales.orders
-SELECT * FROM sales.ordersarchive
-SELECT * FROM sales.products
+SELECT o.orderid,o.sales,c.firstname,p.product AS product_name,P.price,e.firstname AS salesPersonName FROM
+sales.orders AS O left join sales.customers AS C ON O.CUSTOMERID=C.CUSTOMERID 
+LEFT JOIN sales.products AS P ON O.productid=p.productid LEFT JOIN sales.employees AS E ON O.salespersonid=e.employeeid
+
+
 
 
