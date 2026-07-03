@@ -16,3 +16,30 @@ SELECT firstname,lastname FROM sales.customers
 SELECT firstname,lastname FROM sales.employees
 INTERSECT
 SELECT firstname,lastname FROM sales.customers
+/*task-5-orders are stored in seperate table (orders and archieve)
+combine all orders into one data without duplicate data*/
+SELECT [OrderID]
+      ,[ProductID]
+      ,[CustomerID]
+      ,[SalesPersonID]
+      ,[OrderDate]
+      ,[ShipDate]
+      ,[OrderStatus]
+      ,[ShipAddress]
+      ,[BillAddress]
+      ,[Quantity]
+      ,[Sales]
+      ,[CreationTime] FROM sales.orders
+UNION
+SELECT [OrderID]
+      ,[ProductID]
+      ,[CustomerID]
+      ,[SalesPersonID]
+      ,[OrderDate]
+      ,[ShipDate]
+      ,[OrderStatus]
+      ,[ShipAddress]
+      ,[BillAddress]
+      ,[Quantity]
+      ,[Sales]
+      ,[CreationTime] FROM  sales.ordersarchive
