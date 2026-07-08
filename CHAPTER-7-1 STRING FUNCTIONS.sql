@@ -14,5 +14,7 @@ SELECT first_name,LEN(first_name) AS NAME_LENGTH FROM customers;
 SELECT  first_name,LEFT(TRIM(first_name),2) AS FIRST_NAME_2_CHAR FROM customers;
 --task-7-retrieve the LAST two characters of each first name
 SELECT  first_name,RIGHT(TRIM(first_name),2) AS FIRST_NAME_2_CHAR FROM customers;
+--task-8-retrieve a list of customers first_name removing the first character
+SELECT first_name,SUBSTRING(TRIM(first_name),2,LEN(first_name)) AS RESULT FROM customers;
 
 
