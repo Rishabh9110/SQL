@@ -11,5 +11,8 @@ SELECT '123-456-789' AS PHONE_NUMBER,REPLACE('123-456-789','-','/') AS new_phone
 --task-5-Calculate the length of each customer first name
 SELECT first_name,LEN(first_name) AS NAME_LENGTH FROM customers; 
 --task-6-retrieve the first two characters of each first name
-SELECT  first_name,LEFT(first_name,2) AS FIRST_NAME_2_CHAR FROM customers;
+SELECT  first_name,LEFT(TRIM(first_name),2) AS FIRST_NAME_2_CHAR FROM customers;
+--task-7-retrieve the LAST two characters of each first name
+SELECT  first_name,RIGHT(TRIM(first_name),2) AS FIRST_NAME_2_CHAR FROM customers;
+
 
